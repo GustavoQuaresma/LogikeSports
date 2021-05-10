@@ -106,20 +106,21 @@ ul li a:hover {
     height: 11%;
     background-color: white;
   }
+
+
   .logojogo {
     margin-left: auto;
     margin-right: auto;
     width: auto;
-    height: 50px;
+    height: 100%;
   }
 
   .logojogo1 {
-    margin-top: 8px;
+    margin-top: 7px;
     margin-left: auto;
     margin-right: auto;
     width: auto;
-    height: 35px;
-
+    height: 80%;
   }
 
   .divimg:hover {
