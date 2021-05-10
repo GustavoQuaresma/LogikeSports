@@ -11,6 +11,7 @@ html, body {
   height: 50px;
   position: fixed;
   z-index: 2;
+  display: none;
 }
 
 nav {
@@ -71,22 +72,31 @@ ul li a:hover {
   margin: auto;
 }
 
-.atual {
-  cursor: not-allowed;
+#slogan {
+  background-image: url(../img/giffundo.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #home {
   background-color: #1A1A1A
 }
+.sloganslide {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  
+}
 
-.slide {
+.homeslide {
   position: relative;
   min-height: 200%;
   width: 100%;
+  box-shadow: 10px -12px 10px rgba(0, 0, 0, 0.7);
 }
 
 .imagens {
-  padding-top: 60px;
+  padding-top: 80px;
   display: flex;
   width: 85%;
   height: auto;
