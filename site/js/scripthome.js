@@ -1,10 +1,10 @@
 window.onscroll = function () {
-    console.log(window.scrollY, slogan.offsetHeight )
     if (window.scrollY >= slogan.offsetHeight) {
-        cabecalho.style = "display: block";
-        cabecalho.style = "display: block";
+        cabecalho.style = "  height: 50px; ";
+    
     }
     else {
-        cabecalho.style = "display: none";
+        cabecalho.style = "height: 0px;";
+        
     }
 }
