@@ -1,10 +1,14 @@
 window.onscroll = function () {
     if (window.scrollY >= slogan.offsetHeight) {
-        cabecalho.style = "  height: 50px; ";
+        cabecalho.style = " transform: translateY(0) ; ";
     
     }
     else {
-        cabecalho.style = "height: 0px;";
+        cabecalho.style = "";
         
     }
+}
+
+function start() {
+    body.style = "overflow-y: auto;"
 }
