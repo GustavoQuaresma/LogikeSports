@@ -20,7 +20,11 @@ body {
 
   transform: translateY(-100%) ;
 }
-
+.logo {
+  float: left;
+  height: 50px;
+  width: 120px;
+}
 nav {
   height: auto;
   float: left;
