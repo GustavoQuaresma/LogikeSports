@@ -52,7 +52,6 @@ html, body {
   .destaque {
     width: 40px;
     border-bottom: 3px solid #d815ff;
- 
   }
   
   .login {
@@ -86,19 +85,59 @@ html, body {
     width: 100%;
   }
   #noticias {
-    background-color: #1A1A1A;
+    background-color: rgb(255, 255, 240);
   }
   
   .noticiasslide {
     position: relative;
-    min-height: 100%;
+    min-height: 120%;
     width: 100%;
+    box-shadow: 0px -8px 10px rgba(0, 0, 0, 0.7);
   }
 .video {
   padding-top: 50px;
   margin: 0 auto;
   text-align:center;
 }
-.video iframe {
-  cursor: none;
+.titulojogo {
+  margin: 0;
+  padding-top: 10px;
+
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+  color: #7641A3;
+}
+.noticias1 {
+  width: 85%;
+  padding-top: 20px;
+  margin: auto;
+  display: flex;
+}
+.imagem {
+  width: auto;
+  height: 300px;
+  border-color: 3px #000000;
+}
+.titulonot {
+  margin: 0;
+  padding-top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: #7641A3;
+  
+}
+.noticiascenter1 {
+  display: inline;
+  margin-left: 30px ;
+  text-align: justify;
+}
+.noticiascenter2 {
+  display: inline;
+  margin-right: 30px ;
+  text-align: justify;
+}
+.not {
+  font-size: 18px;
 }
