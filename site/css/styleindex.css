@@ -63,6 +63,7 @@ ul li a:hover {
   border-bottom: 3px solid #d815ff;
 }
 
+
 .login {
   font-family: 'Kulim Park';
   margin-top: 10px;
@@ -110,7 +111,7 @@ ul li a:hover {
 
 .graficoslide {
   position: relative;
-  min-height: 70%;
+  min-height: 100%;
   width: 100%;
   box-shadow: 10px -12px 10px rgba(0, 0, 0, 0.7);
 }

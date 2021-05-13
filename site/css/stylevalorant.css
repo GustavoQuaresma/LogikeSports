@@ -30,6 +30,7 @@ html, body {
     margin-right: 15px;
     text-transform: uppercase;
     padding-bottom: 13px;
+    transition: 0.2s;
   }
   
   ul li a {
@@ -51,6 +52,7 @@ html, body {
   .destaque {
     width: 40px;
     border-bottom: 3px solid #d815ff;
+ 
   }
   
   .login {
@@ -74,4 +76,29 @@ html, body {
     max-width: 95%;
     margin: auto;
   }
+  #videos {
+    background-color: #0e0e0e;
+  }
   
+  .videoslide {
+    position: relative;
+    min-height: auto;
+    width: 100%;
+  }
+  #noticias {
+    background-color: #1A1A1A;
+  }
+  
+  .noticiasslide {
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+  }
+.video {
+  padding-top: 50px;
+  margin: 0 auto;
+  text-align:center;
+}
+.video iframe {
+  cursor: none;
+}
