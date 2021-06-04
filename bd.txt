@@ -1,0 +1,21 @@
+create table Usuario (
+  idUsuario INT PRIMARY KEY identity,
+  nome VARCHAR(45) NOT NULL,
+  login VARCHAR(45) NOT NULL,
+  senha VARCHAR(45) NOT NULL,
+  email VARCHAR(80) NOT NULL,
+  dataNasc DATE NOT NULL,
+  fkJogo INT NOT NULL,
+  FOREIGN KEY (fkJogo) REFERENCES jogo (idJogo));	
+create table Jogo (
+  idUsuario INT PRIMARY KEY identity,
+  nomeJogo VARCHAR(45) NOT NULL,
+  tipoJogo VARCHAR(45) NOT NULL);
+
+
+Create table publicacao (
+	idComentario INT PRIMARY KEY identity,
+	descricao VARCHAR(255) NOT NULL,
+	idPubli INT NOT NULL,
+	fkUsuario INT NOT NULL
+	FOREIGN KEY (fkUsuario) REFERENCES Usuario(idUsuario));
