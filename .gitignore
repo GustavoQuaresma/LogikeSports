@@ -60,9 +60,4 @@ typings/
 # next.js build output
 .next
 
-.directory
-package-lock.json
 
-config/
-
-database.js
