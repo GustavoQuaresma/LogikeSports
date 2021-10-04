@@ -35,7 +35,7 @@ function nome() {
     nome_usuario = sessionStorage.nome_usuario_meuapp;
     jogo_usuario = sessionStorage.jogo_usuario_meuapp;
     if (login_usuario == undefined) {
-        redirecionar_login();
+        b_usuario.innerHTML = `undefined`;
     } 
     else {
         b_usuario.innerHTML = `${nome_usuario}`;

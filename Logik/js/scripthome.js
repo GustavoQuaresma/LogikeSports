@@ -30,7 +30,7 @@ function gif(){
     var vetorgifs = ['giffundo.gif','giffundo2.gif','giffundo3.gif','giffundo4.gif','giffundo5.gif']
     var sorteio = parseInt(Math.random()*5)+0;
     fundo = vetorgifs[sorteio];
-    slogan.style.backgroundImage = "url('../img/"+ fundo +"')";
+    slogan.style.backgroundImage = "url('./img/"+ fundo +"')";
 }
 
 function grafico() {
