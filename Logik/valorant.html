@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/stylejogos.css">
+  <link rel="stylesheet" href="css/scrollbar.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="icon" href="img/icon.png">
+  <script src="funcoes.js"></script>
+  <script src="dark.js"></script>
+  <script src="https://kit.fontawesome.com/6f2d70ffaf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/8bit-wonder" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200;700&display=swap" rel="stylesheet">
+  <title>Valorant</title>
+</head>
+
+<body id="body">
+  <div id="cabecalho" class="cabecalho">
+    <img class="logo11" src="img/quaresmo1.png" alt="">
+    <div id="box" class="box">
+      <!-- <img class="logo" src="img/quaresmo.png" alt=""> -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="leagueoflegends.html">League of Legends</a></li>
+          <li><a href="csgo.html">CS:GO</a></li>
+          <li class="destaque"><a href="valorant.html">Valorant</a></li>
+        </ul>
+      </nav>
+
+      <i class="fas fa-sign-out-alt" onclick="chamar()"></i>
+      <i id="i" class="fas fa-moon" onclick="dark()"></i>
+      <span id="b_usuario" class="b_usuario"></span>
+    </div>
+  </div>
+
+  <section id="videos" class="videoslide">
+    <div class="video">
+      <iframe width="620" height="350" frameBorder="0"
+        src="https://www.youtube.com/embed/IhhjcB2ZjIM?playlist=IhhjcB2ZjIM&autoplay=1&mute=1&start=11&end=93&loop=1&controls=0&disablekb=1&showinfo=1">
+      </iframe>
+    </div>
+  </section>
+  <section id="noticias" class="noticiasslide">
+    <p class="titulojogo">NOTÍCIAS</p>
+    <div class="noticias1">
+      <div class="zoom">
+      <a href="noticiasval/Team-Vikings-vence-Sharks.html"><img class="imagem" src="img/team-vikings-campeoes.jpg"
+          alt=""></a></div>
+      <div class="noticiascenter1">
+        <p class="titulonot">Team Vikings vence a Sharks e é bicampeã brasileira no VCT</p>
+        <p class="not">A Team Vikings venceu a final brasileira de Valorant Challengers Brasil contra a Sharks Esports
+          por 3-1 no placar de mapas. A disputa terminou na noite deste domingo (9) em uma série melhor de cinco, com
+          parciais de 13-10 na Ascent, 2-13 na Haven, 13-11 na Bind e 13-9 na Icebox, a equipe da Team Vikings se
+          consagrou campeã do VCT Brasil. Os dois times estão classificados e representam o Brasil no primeiro
+          campeonato mundial de Valorant, o Masters Reykjavík, que acontece na Islândia entre os dias 24 e 30 de maio.
+        </p>
+      </div>
+    </div>
+
+    <div class="noticias1">
+      <div class="noticiascenter2">
+        <p class="titulonot"> Gamelanders Purple vence o Protocolo Gêneses 3</p>
+        <p class="not"> A final do Protocolo Gêneses 3 aconteceu neste domingo (16), com a vitória de 2 a 1 da
+          Gamelanders Purple contra a Fire Angels. Essa é a terceira conquista da GL Purple no Protocolo Gêneses, em que
+          ganhou as duas edições anteriores, e carimba a vaga na Grande Final do circuito.
+          <br> Conseguindo novamente o pistol, a Gamelanders saiu na dianteira vencendo o pistol e anti-eco, que ajudou
+          a controlar o mapa e trabalhar com calma nas entradas de bombs até conseguir os 13 rounds e vencer a série.
+          Natália “daiki” Vilela e Paula “bstrdd” Naguil se destacaram muito nessa mapa, principalmente nas situações de
+          pós-plant e lurk.
+        </p>
+      </div>
+      <div class="zoom">
+      <a href="noticiasval/Gamelanders-Purple-vence.html"><img class="imagem" src="img/CAPA-GL-FEM.png" alt=""></a></div>
+    </div>
+    <div class="noticias1">
+      <div class="zoom">
+      <a href="noticiasval/sacy-MVP.html"><img class="imagem" src="img/MVP_VZONE_VCB_FINALS_WIDE.png" alt=""></a></div>
+      <div class="noticiascenter1">
+        <p class="titulonot">sacy é eleito o MVP da fase final do VCB 2</p>
+        <p class="not">A fase final da segunda etapa do VALORANT Challengers Brasil (VCB Finals) chegou ao fim neste
+          domingo com Team Vikings batendo a Sharks por 2 a 1 de virada e, com isso, ficando com o título, o terceiro da
+          equipe na temporada já que também venceu o Ultimasters AOC e o VALORANT Masters Brasil.
+          <br>Gustavo “Sacy” Rossi continua detonando nessa temporada, ou melhor, sovando. Além do bicampeonato
+          brasileiro, o jogador da Vikings tem um motivo extra para comemorar, o fato de ter sido eleito pelo VALORANT
+          Zone como o Jogador Mais Valioso (MVP) do campeonato pelo impacto que causou durante toda a competição.
+        </p>
+      </div>
+    </div>
+  </section>
+  <div id="absoluto" class="absoluto">
+    <div class="sair">
+      <img class="iconsair"src="img/icon.png" alt="">
+      <p class="titulo">Deseja mesmo sair?</p>
+      <div class="lado">
+        <button class="btncancelar" onclick="esconder()" >Cancelar</button>
+        <button class="btnsair" onclick="logoff()"> Sair</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  verifica();
+  nome();
+
+</script>

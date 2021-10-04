@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/stylenoticia.css">
+  <link rel="stylesheet" href="../css/scrollbar.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="icon" href="../img/icon.png">
+  <script src="../funcoes.js"></script>
+  <script src="../dark.js"></script>
+  <script src="https://kit.fontawesome.com/6f2d70ffaf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/8bit-wonder" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200;700&display=swap" rel="stylesheet">
+  <title>FURIA vence e elimina MIBR da BLAST Premier: Spring Showdown 2021</title>
+</head>
+
+<body id="body" onload="obterPublicacoes(), verificapagina()">
+  <div id="noticias">
+    <div id="cabecalho" class="cabecalho">
+      <img class="logo11" src="../img/quaresmo1.png" alt="">
+      <div id="box" class="box">
+        <!-- <img class="logo" src="img/quaresmo.png" alt=""> -->
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../leagueoflegends.html">League of Legends</a></li>
+            <li class="destaque"><a href="../csgo.html">CS:GO</a></li>
+            <li><a href="../valorant.html">Valorant</a></li>
+          </ul>
+        </nav>
+        <i class="fas fa-sign-out-alt" onclick="chamar()"></i>
+        <i id="i" class="fas fa-moon" onclick="dark()"></i>
+        <span id="b_usuario" class="b_usuario"></span>
+      </div>
+    </div>
+    <conteiner class="leitura">
+      <p class="titulonot">FURIA vence e elimina MIBR da BLAST Premier: Spring Showdown 2021</p>
+      <p class="noticia">A FURIA Esports venceu a MIBR nesta quarta-feira (14) na estreia de ambas as equipes na BLAST
+        Premier: Spring Showdown 2021, torneio de Counter-Strike: Global Offensive (CS:GO). Como a competição conta com
+        o
+        formato de eliminação simples, a MIBR acabou eliminada após essa derrota. A série melhor de três partidas (MD3)
+        contou com a estreia de Raphael "exit" Lacerda pela MIBR e um confronto bastante equilibrado entre as equipes
+        brasileiras. No final, a FURIA conquistou a vitória por 2-0, com parciais de 16-14, na Mirage, e 16-10, na
+        Vertigo.
+        <img class="time" src="../img/furia.jpg">
+      <p class="noticia">
+        O resultado coloca a FURIA na segunda fase da BLAST Premier: Spring Showdown 2021, onde terá um confronto
+        bastante
+        complicado contra a equipe da Gambit Esports, vice-campeã da ESL Pro League Season 13. O confronto acontecerá no
+        sábado (17) às 10h30, horário oficial de Brasília, e terá transmissão ao vivo nos canais oficiais da BLAST na
+        Twitch TV.</p>
+      </p>
+    </conteiner>
+    <div class="container">
+      <div class="post">
+        <h2 class="comentarios">Faça seu comentario</h2>
+        <form id="form_publicar" method="post" onsubmit="return publicar()">
+          <br>
+          <textarea id="" rows="3" cols="50" maxlength="100" class="textarea" name="descricao"></textarea>
+          <br>
+          <button id="btn_publicar" class="btn-green">Publicar</button>
+        </form>
+        <div class="extra">
+          <div id="div_erro" class="msg_erro">
+          </div>
+        </div>
+      </div>
+
+      <h1 class="publitxt">Publicações:</h1>
+      <div id="feed_container" class="contfeed">
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="absoluto" class="absoluto">
+    <div class="sair">
+      <img class="iconsair" src="../img/icon.png" alt="">
+      <p class="titulo">Deseja mesmo sair?</p>
+      <div class="lado">
+        <button class="btncancelar" onclick="esconder()">Cancelar</button>
+        <button class="btnsair" onclick="logoffnoticia()"> Sair</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  function verificapagina() {
+    var numeropagina = 1;
+    sessionStorage.publi = numeropagina;
+  }
+  verifica();
+  nome();
+</script>

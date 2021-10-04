@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/scrollbar.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/stylecadastro.css">
+  <link rel="icon" href="img/icon.png">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/8bit-wonder" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200;700&display=swap" rel="stylesheet">
+  <title>Cadastro</title>
+</head>
+
+<body>
+
+  <body id="body">
+    <section id="loginpage" class="loginslide">
+      <a href="login.html"><img class="seta" src="img/11123.png" onmouseover="this.src='img/11122.png'"
+          onmouseout="this.src='img/11123.png'" alt=""></a>
+      <div class="center">
+        <div class="quadrado">
+          <div class="quadradocenter">
+            <h1 class="titulo">CADASTRO</h1>
+            <div class="inputs">
+              <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                <input class="input" id="nome" name="nome" type="text" placeholder="NOME COMPLETO" autofocus>
+                <input class="inputlogin" id="login" name="login" type="text" placeholder="NOME DE USUARIO">
+                <p id='loginerrado' class='errado'>Nome de usuario com caracteres inválidos.</p>
+                <input class="inputemail" id="email" name="email" type="text" placeholder="E-MAIL">
+                <p id='errado' class='errado'>E-mail inválido.</p>
+                <input class="input" id="datanasc" name="datanasc" type="date">
+                <input class="input" id="senha" name="senha" type="password" placeholder="SENHA">
+                <select id="jogo" name="jogoselect">
+                  <option value="" disable selected>JOGO FAVORITO</option>
+                  <option value="1">LEAGUE OF LEGENDS</option>
+                  <option value="2">CSGO</option>
+                  <option value="3">VALORANT</option>
+                </select>
+            </div>
+            <input type="submit" id="btn_entrar" value="CADASTRAR" class="btn">
+            </form>
+            <a href="login.html">
+              <p class="txtcadastro">JÁ POSSUO UMA CONTA</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </body>
+
+</html>
+<script>
+
+  function cadastrar() {
+    var email1 = email.value;
+    var login1 = login.value;
+    var nome1 = nome.value;
+    var datanasc1 = datanasc.value;
+    var senha1 = senha.value;
+    var jogo1 = jogo.value;
+    aguardar();
+    var cadastrar = new URLSearchParams(new FormData(form_cadastro));
+
+    if (email1 != '' && login1 != '' && nome1 != '' && datanasc1 != '' && senha1 != '' && jogo1 != '') {
+      if (email1.indexOf("@") == -1 || email1.indexOf(".") == -1) {
+
+        document.getElementById("errado").classList.add('aparecendo');
+        document.getElementById("errado").classList.remove('errado');
+        document.getElementById("email").classList.remove('inputemail');
+        document.getElementById("email").classList.add('erroemail');
+        finalizar_aguardar();
+        return false;
+      }
+      if (login1.indexOf(" ") > -1 && login1.indexOf("!") > -1 && login1.indexOf("@") > -1 && login1.indexOf("#") > -1) {
+        document.getElementById("loginerrado").classList.add('aparecendo');
+        document.getElementById("loginerrado").classList.remove('errado');
+        document.getElementById("login").classList.remove('inputlogin');
+        document.getElementById("login").classList.add('errologin');
+
+        finalizar_aguardar();
+        return false;
+
+      }
+      else {
+        fetch("/usuarios/cadastrar", {
+          method: "POST",
+          body: cadastrar
+        }).then(function (response) {
+          if (response.ok) {
+            window.location.href = 'login.html';
+          }
+          else {
+            {
+              console.log('Erro de cadastro!');
+              finalizar_aguardar();
+
+            }
+          }
+        });
+      }
+    }
+    else {
+      alert('Por favor preencha todos os campos e tente novamente.')
+      finalizar_aguardar();
+
+    }
+    return false;
+  }
+  function aguardar() {
+    btn_entrar.disabled = true;
+  }
+
+  function finalizar_aguardar() {
+    btn_entrar.disabled = false;
+  }
+</script>

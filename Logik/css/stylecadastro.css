@@ -1,0 +1,156 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Kulim Park';
+    scroll-behavior: smooth;
+  }
+  
+#loginpage {
+    background-image: url(../img/fundo!.jpg);
+    background-size: cover;
+
+}
+.loginslide {
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+  }
+.quadrado {
+  background-color: white;
+  width: 380px;
+  height: 520px;
+  display: block;
+  margin: auto;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 1);
+}
+.center {
+  padding-top: 30px;
+}
+.quadradocenter {
+  text-align: center;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input {
+
+  height: 35px;
+  width: 70%; 
+  margin-bottom: 20px;
+  font-size: 18px;
+  background-color: #ededed;
+  border: 0;
+  font-family:"Kulim Park";
+  text-align: center;
+  outline: none;
+}
+.inputlogin {
+  height: 35px;
+  width: 70%; 
+  margin-bottom: 20px;
+  font-size: 18px;
+  background-color: #ededed;
+  border: 0;
+  font-family:"Kulim Park";
+  text-align: center;
+  outline: none;
+}
+.inputemail {
+  height: 35px;
+  width: 70%; 
+  margin-bottom: 20px;
+  font-size: 18px;
+  background-color: #ededed;
+  border: 0;
+  font-family:"Kulim Park";
+  text-align: center;
+  outline: none;
+}
+.errologin {
+  height: 35px;
+  width: 70%; 
+  font-size: 18px;
+  background-color: #ededed;
+  font-family:"Kulim Park";
+  text-align: center;
+  outline: none;
+  border: 1;
+  border-color: red;
+}
+.erroemail {
+  height: 35px;
+  width: 70%; 
+  font-size: 18px;
+  background-color: #ededed;
+  font-family:"Kulim Park";
+  text-align: center;
+  outline: none;
+  border: 1;
+  border-color: red;
+}
+.errado {
+  display: none;
+}
+.aparecendo {
+  font-size: 16px;
+  color: red;
+  padding: 0;
+  margin-bottom: 5px;
+  margin-top: 2px;
+}
+select {
+  height: 35px;
+  width: 72%; 
+  margin-bottom: 20px;
+  font-size: 18px;
+  background-color: #ededed;
+  border: 0;
+  font-family:"Kulim Park";
+  text-align: center;
+  outline: none;
+  text-align-last: center ;
+}
+option {
+  text-align: center;
+}
+input:hover {
+  background-color: #e0e0e0;
+
+}
+.btn {
+  background-color: #7641A3;
+  height: 40px;
+  width: 72%;
+  font-family:"Kulim Park";
+  font-weight: bold;
+  border: 0;
+  margin-bottom: 15px;
+}
+.btn:hover {
+  background-color: #d815ff;
+}
+.txtcadastro {
+  font-size: 16px;
+  color: black;
+  margin: 0;
+}
+.txtcadastro:hover {
+  color: #7641A3;
+}
+.inputs {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.titulo {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.seta {
+    margin-top: 10px;
+    margin-left: 12px;
+    width: 43px;
+    height: 43px;
+  }
+  

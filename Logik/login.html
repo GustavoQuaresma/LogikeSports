@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/scrollbar.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/stylelogin.css">
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/8bit-wonder" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200;700&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <body id="body">
+      <section id="loginpage" class="loginslide">
+        <a href="index.html"><img class="seta" src="img/11123.png" onmouseover="this.src='img/11122.png'" onmouseout="this.src='img/11123.png'" alt=""></a>
+        <div class="center">
+        <div class="quadrado">
+            <div class="quadradocenter">
+            <h1 class="titulo">Iniciar Sessão</h1>
+            <div class="inputs">
+              <form id="form_login" method="post" onsubmit="return entrar()">
+              <input class="logininput" id='login' name="login" type="text" placeholder="NOME DE USUARIO" autofocus>
+            <input class= "senha" id='senha' name="senha" type="password" placeholder="SENHA">
+         
+          </div>
+          <p id='errado' class='errado'>Usuário ou senha inválidos.</p>
+            <button id="btn_entrar" class="btn">ENTRAR</button>
+          </form>
+            <a href="cadastro.html"><p class="txtcadastro">CRIAR CONTA</p></a>
+          </div>
+        </div>
+        </div>
+    </div>
+      </section>
+</body>
+</html>
+<script>
+
+  function entrar() {
+      aguardar();
+      var formulario = new URLSearchParams(new FormData(form_login));
+      fetch("/usuarios/autenticar", {
+          method: "POST",
+          body: formulario
+      }).then(resposta => {
+
+          if (resposta.ok) {
+
+              resposta.json().then(json => {
+                  sessionStorage.login_usuario_meuapp = json.login;
+                  sessionStorage.nome_usuario_meuapp = json.nome;
+                  sessionStorage.jogo_usuario_meuapp = json.fkJogo;
+                  sessionStorage.id_usuario_meuapp = json.idUsuario;
+                
+                window.location.href = 'aguarde.html';
+
+              });
+
+          } else {
+              document.getElementById("errado").classList.add('aparecendo');
+              document.getElementById("errado").classList.remove('errado');
+              document.getElementById("login").classList.add('errologin');
+              document.getElementById("senha").classList.add('errosenha');
+              document.getElementById("login").classList.remove('logininput');
+              document.getElementById("senha").classList.remove('senha');
+              console.log('Erro de login!');
+
+              resposta.text().then(texto => {
+                  console.error(texto);
+                  finalizar_aguardar(texto);
+              });
+          }
+      });
+
+      return false;
+  }
+
+  function aguardar() {
+      btn_entrar.disabled = true;
+  }
+
+  function finalizar_aguardar(resposta) {
+      btn_entrar.disabled = false;
+  }
+
+</script>

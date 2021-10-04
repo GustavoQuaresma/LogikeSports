@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styleindex.css">
+  <link rel="stylesheet" href="css/scrollbar.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="icon" href="img/icon.png">
+  <script src="js/scripthome.js"></script>
+  <script src="../models/leitura.js"></script>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/8bit-wonder" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200;700&display=swap" rel="stylesheet">
+  <title>LogiK eSports</title>
+</head>
+
+<body id="body" onload="grafico(), gif()">
+  <div id="cabecalho" class="cabecalho">
+    <img class="logo11" src="img/quaresmo1.png" alt="">
+    <div id="box" class="box">
+      <nav>
+        <ul>
+          
+          <li id="homeli"><a href="#slogan">Home</a></li>
+          <li id="jogosli"><a href="#home">Jogos</a></li>
+          <li id="quemli"><a href="#quemsomos">Quem Somos</a></li>
+          <li id="graficoli"><a href="#grafico">Gráfico</a></li>
+        
+        </ul>
+      </nav>
+      <a href="login.html"><button class="login">LOGIN</button></a>
+    </div>
+  </div>
+
+  <section id="slogan" class="sloganslide">
+    <img class="logocentral" src="img/quaresmo.png">
+    <div class="center">
+ 
+    <a href="#home" onclick="start()">
+      <button class="start" >START</button></a>
+    </div>
+  </section>
+
+  <section id="home" class="homeslide">
+    <h1 class="titulo">Nossos Jogos</p>
+      <div class="imagens">
+        <div class="divimg">
+          <img class="imgval" src="img/lol.jpg" alt="">
+          <div class="divbranca">
+            <img class="logojogo" src="img/lol-league-of-Legends-logo-2-1.png" alt="">
+          </div>
+        </div>
+        <div class="divimg">
+          <img class="imgval " src="img/csgo.jpg" alt="">
+          <div class="divbranca">
+            <img class="logojogo" src="img/cs-go-logo-1-1.png" alt="">
+          </div>
+        </div>
+        <div class="divimg">
+          <img class="imgval" src="img/VALORANT1.jpg" alt="">
+          <div class="divbranca">
+            <img class="logojogo1" src="img/V_Logotype_Red12045.png" alt="">
+          </div>
+        </div>
+      </div>
+  </section>
+  <section id="quemsomos" class="quemsomosslide">
+    <p class="tituloquem">Quem Somos?</p>
+    <p class="textoquem"> LogiK eSports é sua mais nova fonte de informação sobre o mundo competitivo do eSports, também conhecido como esporte eletrônico ou ciberesporte. Nós, da Logik, trazemos para você notícias de três jogos
+      que movimentam esse mundo, que são, League of Legends, Counter-Strike: Global Offensive e Valorant.
+    </p>
+  </section>
+  <section id="grafico" class="graficoslide">
+    <p class="titulografico">Popularidade dos Jogos</p>
+    <div class="graficola">
+    <canvas id="myChart" width="500" height="500"></canvas>
+  </div>
+  </section>
+  <div class="footer"><a href="https://logik.atlassian.net/servicedesk/customer/portal/2" target="_blank"> Precisa de ajuda? </a><br> © 2021 by Logik eSports. Todos os direitos reservados. </div>
+</body>
+
+</html>

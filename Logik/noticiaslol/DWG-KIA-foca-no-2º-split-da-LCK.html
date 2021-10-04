@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/stylenoticia.css">
+  <link rel="stylesheet" href="../css/scrollbar.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="icon" href="../img/icon.png">
+  <script src="../funcoes.js"></script>
+  <script src="../dark.js"></script>
+  <script src="https://kit.fontawesome.com/6f2d70ffaf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/8bit-wonder" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200;700&display=swap" rel="stylesheet">
+  <title>DWG KIA foca no 2º split da LCK </title>
+</head>
+
+<body id="body" onload="obterPublicacoes(), verificapagina()">
+  <div id="noticias"> 
+  <div id="cabecalho" class="cabecalho">
+    <img class="logo11" src="../img/quaresmo1.png" alt="">
+    <div id="box" class="box">
+      <!-- <img class="logo" src="img/quaresmo.png" alt=""> -->
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li class="destaque"><a href="../leagueoflegends.html">League of Legends</a></li>
+          <li><a href="../csgo.html">CS:GO</a></li>
+          <li><a href="../valorant.html">Valorant</a></li>
+        </ul>
+      </nav>
+      <i class="fas fa-sign-out-alt" onclick="chamar()"></i>
+      <i id="i" class="fas fa-moon" onclick="dark()"></i>
+      <span id="b_usuario" class="b_usuario"></span>
+    </div>
+  </div>
+  <conteiner class="leitura">
+    <p class="titulonot">Após derrota na Final, DWG KIA foca no 2º split da LCK e vaga no Mundial</p>
+    <p class="noticia">A DAMWON KIA foi derrotada neste domingo (23) na Grande Final do MSI 2021 pela Royal Never
+      Give-up, em série acirrada de cinco jogos. Após o fim da última partida, os sul-coreanos, cabisbaixos,
+      participaram da coletiva de imprensa, onde falaram brevemente sobre o confronto.
+
+      Sempre em poucas palavras, os jogadores responderam sobre o que, na opinião deles, deu errado na série contra a
+      RNG. Para o treinador, kkOma, sua equipe simplesmente não conseguiu jogar bem. “Hoje, nós não conseguimos vencer
+      porque não fomos bons o bastante.
+
+      <img class="time" src="../img/PSG-Talon-MSI-2021-1-800x563.jpg">
+    <p class="noticia">
+      Temos que olhar para os nossos erros e corrigi-los para o 2º split, e também para o Mundial.”
+
+
+      Vice-campeã do MSI 2021, a DWG KIA projeta 2º split da LCK e Worlds 2021 (Foto: Riot Games)
+
+      O caçador, Canyon, foi na mesma linha do coach. Falando mais especificamente do seu matchup contra Wei, ele
+      inclusive elogiou o adversário: “Acredito que o Wei é um jogador perfeito, sem defeitos, na Selva. Hoje nós
+      jogamos da forma certa com nossos picks, mas perdemos porque eu não consegui atuar no mais alto nível.”</p>
+    </p>
+  </conteiner>
+  <div class="container">
+    <div class="post">
+        <h2 class="comentarios">Faça seu comentario</h2>
+        <form id="form_publicar" method="post" onsubmit="return publicar()">
+            <br>
+            <textarea id="" rows="3" cols="50" maxlength="100" class="textarea" name="descricao"></textarea>
+            <br>
+            <button id="btn_publicar" class="btn-green">Publicar</button>
+        </form>
+        <div class="extra">
+            <div id="div_erro" class="msg_erro">
+            </div>
+        </div>
+    </div>
+
+        <h1 class="publitxt">Publicações:</h1>
+        <div id="feed_container" class="contfeed">
+
+    </div>
+</div>
+</div>
+</div>
+<div id="absoluto" class="absoluto">
+  <div class="sair">
+    <img class="iconsair"src="../img/icon.png" alt="">
+    <p class="titulo">Deseja mesmo sair?</p>
+    <div class="lado">
+      <button class="btncancelar" onclick="esconder()" >Cancelar</button>
+      <button class="btnsair" onclick="logoffnoticia()"> Sair</button>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
+<script>
+    function verificapagina(){
+    var numeropagina = 4;
+    sessionStorage.publi = numeropagina;
+}
+    verifica();
+  nome();
+</script>
